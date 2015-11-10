@@ -174,5 +174,10 @@ ReactRegex = [
   {
     regex: /\stabindex=/g,
     replace: " tabIndex="
+  },
+  // Template.contentBlock
+  {
+    regex: /({{>\s*Template.contentBlock\s*}})/g,
+    replace: "{this.props.children}"
   }
 ];
