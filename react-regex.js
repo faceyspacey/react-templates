@@ -179,5 +179,10 @@ ReactRegex = [
   {
     regex: /({{>\s*Template.contentBlock\s*}})/g,
     replace: "{this.props.children}"
+  },
+  // @index -- match @index by itself {{@index}} or as a param to helper {{helper @index anotherParam}}
+  {
+    regex: /({{.*@index.*}})/g,
+    replace: "{index}"
   }
 ];
